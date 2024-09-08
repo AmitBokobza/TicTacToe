@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #b3e5fc;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #01579b;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: #0288d1;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #0277bd;
+    transform: scale(1.05);
+}
+
+.gameContainer {
+    background: #e1f5fe;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.gameBox {
+    width: 120px;
+    height: 120px;
+    background: #81d4fa;
+    border: 2px solid #039be5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gameBox:hover {
+    background: #b3e5fc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gameBox:active {
+    transform: scale(0.95);
+}
+
+.gameBox.x {
+    color: #0077b6; /* Deep ocean blue for X */
+}
+
+.gameBox.o {
+    color: #00b4d8; /* Light seafoam cyan for O */
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .gameContainer {
+        width: 100%;
+        max-width: 400px; 
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .gameBox {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
