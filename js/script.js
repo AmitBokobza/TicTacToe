@@ -7,6 +7,7 @@ const winningCombos = [
     [0,3,6], [1,4,7], [2,5,8],
     [0,4,8], [2,4,6]
 ];
+//add click event for every box and update the game board to show the click
 const result = document.querySelector(".result");
 boxes.forEach((box, index) => {
     box.addEventListener("click", () => {
@@ -20,6 +21,7 @@ boxes.forEach((box, index) => {
     } )
 })
 
+//checks every iteration of a win and compares the gameboard indexes to see if they are the same
 function checkWin(){
     for (let i = 0; i < winningCombos.length; i++){
         const [a, b, c] = winningCombos[i];
@@ -44,6 +46,7 @@ function checkWin(){
     }
 }
 
+//resets gameboard array and innerhtml
 function reset(){
     for(let i = 0; i < gameBoard.length; i++){
         gameBoard[i] = '';
